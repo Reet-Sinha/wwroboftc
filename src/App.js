@@ -40,7 +40,12 @@ function App() {
           Learn React
         </a>
         <h1>
+        DrIronfist/issue6
         gg this works
+        <Button>
+          Click Me!
+        </Button>
+        main
       </h1>
       </header>
       
