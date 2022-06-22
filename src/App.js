@@ -40,9 +40,7 @@ function App() {
           Learn React
         </a>
         <h1>
-        <Button>
-          Click Me!
-        </Button>
+ 
       </h1>
       </header>
       
