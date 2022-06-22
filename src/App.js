@@ -38,7 +38,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React lol
-          what da heck
+          what da heck is going on
         </a>
         <h1>
  
