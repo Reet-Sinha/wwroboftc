@@ -19,9 +19,9 @@ const firebaseConfig = {
   measurementId: "G-WKBDP0V72D"
 };
 
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
 function App() {
   return (
@@ -40,12 +40,16 @@ function App() {
           Learn React
         </a>
         <h1>
-        test
+        gg this works
       </h1>
       </header>
       
     </div>
   );
+}
+
+function bezierCurve(){
+
 }
 
 export default App;
