@@ -23,9 +23,8 @@ export default function PageManager(){
         >
             <Toolbar/>
           <Routes>  
-          <Route exact path = '/wwroboftc/'>
+          <Route exact path = '/wwroboftc/' element={<h1>Hi</h1>}/>
             
-          </Route>
           <Route exact path='/wwroboftc/about/' element={<Markdown>{post}</Markdown>}/>
           </Routes>
         </Box>
