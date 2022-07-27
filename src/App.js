@@ -16,8 +16,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <ResponsiveDrawer/>
-        <PageManager/>
+        <ResponsiveDrawer>
+          <PageManager/>
+        </ResponsiveDrawer>
       </BrowserRouter>
         
       
