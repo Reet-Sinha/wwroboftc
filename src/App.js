@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import ResponsiveDrawer from './Components/ResponsiveDrawer'
 import PageManager from './Components/PageManager';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter, HashRouter} from 'react-router-dom'
 // Import the functions you need from the SDKs you need
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -15,11 +15,11 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename="/wwroboftc">
+      <HashRouter basename="/wwroboftc">
         <ResponsiveDrawer>
           <PageManager/>
         </ResponsiveDrawer>
-      </BrowserRouter>
+      </HashRouter>
         
       
       
