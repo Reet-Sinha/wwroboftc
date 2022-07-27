@@ -1,9 +1,21 @@
 import {Toolbar,Box} from '@mui/material'
 import {Route, Routes} from 'react-router-dom'
+import React from 'react'
+import Markdown from 'markdown-to-jsx';
 
 const drawerWidth = 240;
 
 export default function PageManager(){
+    const [post, setPost] = React.useState('');
+    React.useEffect(()=>{
+        import('../Test.md')
+            .then(res=>{
+                fetch(res.default)
+                    .then(res => res.text())
+                    .then(res => setPost(res))
+            })
+    },[])
+
     return(
         <Box
             component='main'
@@ -14,7 +26,7 @@ export default function PageManager(){
           <Route exact path = '/wwroboftc/'>
             
           </Route>
-          <Route exact path='/wwroboftc/about/' element={<div className="About">About</div>}/>
+          <Route exact path='/wwroboftc/about/' element={<Markdown>{post}</Markdown>}/>
           </Routes>
         </Box>
     )
