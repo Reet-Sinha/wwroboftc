@@ -100,7 +100,6 @@ function ResponsiveDrawer(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <BrowserRouter>
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
@@ -158,7 +157,7 @@ function ResponsiveDrawer(props) {
           {drawer}
         </Drawer>
       </Box>
-        <Box
+        {/* <Box
             component='main'
             sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
         >
@@ -170,10 +169,9 @@ function ResponsiveDrawer(props) {
           <Route exact path='/wwroboftc/about/' element={<div className="About">About</div>}/>
           
         </Routes>
-        </Box>
+        </Box> */}
         
     </Box>
-    </BrowserRouter>
   );
 }
 
