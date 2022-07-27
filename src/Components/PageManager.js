@@ -31,9 +31,9 @@ export default function PageManager(){
             <Toolbar/>
             <div className="pageContainer">
           <Routes>  
-          <Route exact path = '/wwroboftc/' element={<h1>Hi</h1>}/>
+          <Route exact path = '/' element={<h1>Hi</h1>}/>
             
-          <Route exact path='/wwroboftc/about/' element={
+          <Route path='/about' element={
             <Markdown
                 options={{
                     overrides:{
