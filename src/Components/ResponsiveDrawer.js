@@ -27,7 +27,8 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {BrowserRouter, Link, Routes, Route} from 'react-router-dom';
 import "../CSS/responsiveDrawer.scss";
-import { borderColor } from '@mui/system';
+import { borderColor, borderRadius } from '@mui/system';
+import { red } from '@mui/material/colors';
 
 const drawerWidth = 240;
 const keyPages = {
@@ -52,8 +53,8 @@ function ResponsiveDrawer(props) {
   };
 
   const drawer = (
-    <div>
-      <Toolbar />
+    <div className='side-bar-bg'>
+      <Toolbar/>
       <Divider />
       <List sx={{
         width: { sm: `calc(85%)` },
@@ -62,7 +63,7 @@ function ResponsiveDrawer(props) {
         {Object.keys(keyPages).map((text, index) => (  
           <Accordion sx={{
             border: 1, 
-            borderColor: "#734a0e"
+            borderColor: "#734a0e",
           }}>
           <AccordionSummary 
             expandIcon={<ExpandMoreIcon />}
@@ -86,7 +87,7 @@ function ResponsiveDrawer(props) {
         </Accordion>  
         ))}
       </List>
-      <Divider />
+      {/* <Divider /> */}
       <List>
         {Object.keys(extraPages).map((text, index) => (
             <Link to ='/about'>    
@@ -134,8 +135,9 @@ function ResponsiveDrawer(props) {
       </AppBar>
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, bgcolor: "#B45F06", height: {sm: `calc`} }}
         aria-label="mailbox folders"
+        className='side-bar-bg'
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
