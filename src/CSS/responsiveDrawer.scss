@@ -6,6 +6,7 @@
     background: url("./wwroboftc-sidebarbg-alternate\ .png"), #b86d0c;
     background-blend-mode: screen;
     height: 100%;
+    overflow-y: scroll;
 }
 
 .drawer-bg {
@@ -38,4 +39,20 @@
     font-weight: bold;
     margin-top: 5%;
     margin-bottom: 4%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #555;
 }
