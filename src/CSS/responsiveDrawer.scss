@@ -15,13 +15,16 @@
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px) !important;
     overflow: hidden !important;
-    transition-property: box-shadow;
+    transition-property: box-shadow, background-color;
     transition-duration: .4s;
 
     &:hover {
-        transition-property: box-shadow;
+        transition-property: box-shadow, background-color;
         transition-duration: .4s;
-        box-shadow: 1px 1px 20px 8px rgba(255, 149, 2, 0.2);
+        background: rgba(255, 255, 255, 0.2000001);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px) !important;
+        // box-shadow: 1px 1px 20px 8px rgba(255, 149, 2, 0.2);
     }
 }
 
