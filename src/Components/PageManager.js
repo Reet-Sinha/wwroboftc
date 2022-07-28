@@ -11,17 +11,15 @@ const drawerWidth = 240;
 const HeaderReplacement = ({children,id},...props) =>{
     React.useEffect(()=>{
         if (window.location.hash) {
-            const hashid = window.location.hash.replace("#", "");
-            if(hashid){
-            const element = document.getElementById(hashid);
-            console.log(element.getBoundingClientRect().top, document.documentElement.scrollTop, window.pageYOffset, window.scrollY)
-            const yCoordinate = element.getBoundingClientRect().top + 64;
-            const yOffset = -80; 
-
-            window.scrollTo({
-                top: yCoordinate + yOffset -64, behavior:'smooth'
-            })
-            }
+          const hashid = window.location.hash.replace("#", "");
+          if(hashid){
+          const element = document.getElementById(hashid);
+          const yCoordinate = element.getBoundingClientRect().top + window.pageYOffset;
+          const yOffset = -120; 
+          console.log(yCoordinate + yOffset)
+          const y= yCoordinate + yOffset
+          element.scrollIntoView({ top:y, behavior:'smooth'});
+          }
         }
       },[])
     return(
