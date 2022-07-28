@@ -82,7 +82,7 @@ function ResponsiveDrawer(props) {
       <Divider />
       <List>
         {Object.keys(extraPages).map((text, index) => (
-            <Link to ='/wwroboftc/about'>    
+            <Link to ='/about'>    
                 <ListItem key={text} disablePadding>
                     <ListItemButton>
                         <ListItemIcon>
@@ -158,19 +158,7 @@ function ResponsiveDrawer(props) {
         </Drawer>
       </Box>
         {props.children}
-        {/* <Box
-            component='main'
-            sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-        >
-            <Toolbar/>
-            <Routes>
-          <Route exact path = '/wwroboftc/'>
-            
-          </Route>
-          <Route exact path='/wwroboftc/about/' element={<div className="About">About</div>}/>
-          
-        </Routes>
-        </Box> */}
+
         
     </Box>
   );

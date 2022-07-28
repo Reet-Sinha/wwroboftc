@@ -15,11 +15,11 @@ import {BrowserRouter, HashRouter} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <HashRouter basename="/wwroboftc">
+      <BrowserRouter>
         <ResponsiveDrawer>
           <PageManager/>
         </ResponsiveDrawer>
-      </HashRouter>
+      </BrowserRouter>
         
       
       

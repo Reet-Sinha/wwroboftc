@@ -30,23 +30,23 @@ export default function PageManager(){
         >
             <Toolbar/>
             <div className="pageContainer">
-          <Routes>  
-          <Route exact path = '/' element={<h1>Hi</h1>}/>
-            
-          <Route path='/about' element={
-            <Markdown
-                options={{
-                    overrides:{
-                        h1:{
-                            component:header,
-                        }
-                    }
-                }}>
-                {post}
-            </Markdown>
-          }/>
-          </Routes>
-          </div>
+                <Routes>
+                
+                    <Route exact path="/" element={<h1>Hi</h1>}/>  
+                    <Route exact path='/about' element={
+                        <Markdown
+                            options={{
+                                overrides:{
+                                    h1:{
+                                        component:header,
+                                    }
+                                }
+                            }}>
+                            {post}
+                        </Markdown>
+                    }/>
+                </Routes>
+            </div>
         </Box>
     )
 }
