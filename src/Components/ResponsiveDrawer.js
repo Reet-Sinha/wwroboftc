@@ -33,7 +33,7 @@ const keyPages = {
     'Hardware':<SettingsIcon/>, 
     'CAD/Design':<DesignServicesIcon/>, 
     'Software': <CodeIcon/>, 
-    'Marketing/Outreach':<AlternateEmailOutlinedIcon/>
+    'Outreach':<AlternateEmailOutlinedIcon/>
 }
 
 const extraPages = {
@@ -54,16 +54,18 @@ function ResponsiveDrawer(props) {
     <div>
       <Toolbar />
       <Divider />
-      <List>
+      <List sx={{
+        width: { sm: `calc(85%)` },
+        mx: "auto"
+      }}>
         {Object.keys(keyPages).map((text, index) => (  
           <Accordion>
           <AccordionSummary 
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
-            className="roundedCorner"
           >
-            <ListItem key={text} disablePadding className='roundedCorner'>
+            <ListItem key={text} disablePadding>
                <ListItemIcon>
                  {keyPages[text]}
                </ListItemIcon>
