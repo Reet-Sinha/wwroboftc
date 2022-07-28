@@ -56,6 +56,7 @@ function ResponsiveDrawer(props) {
     <div className='side-bar-bg'>
       <Toolbar/>
       <Divider />
+      <p className='category'>Learn: </p>
       <List sx={{
         width: { sm: `calc(85%)` },
         mx: "auto",
@@ -64,7 +65,7 @@ function ResponsiveDrawer(props) {
           <Accordion sx={{
             border: 1, 
             borderColor: "#734a0e",
-            bgcolor: `rgba(255, 255, 255, 0.2)`,
+            bgcolor: `rgba(255, 255, 255, 0.1)`,
             boxShadow: 30
             
           }} className="drawer-bg">
@@ -91,9 +92,10 @@ function ResponsiveDrawer(props) {
         ))}
       </List>
       {/* <Divider /> */}
+      <p className='category'>Resources: </p>
       <List>
         {Object.keys(extraPages).map((text, index) => (
-            <Link to ='/about'>    
+            <Link to ='/about' className='extra-link'>    
                 <ListItem key={text} disablePadding>
                     <ListItemButton>
                         <ListItemIcon>

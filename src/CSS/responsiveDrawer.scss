@@ -11,8 +11,8 @@
 .drawer-bg {
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px) !important;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px) !important;
     overflow: hidden !important;
     transition-property: box-shadow;
     transition-duration: .4s;
@@ -22,4 +22,20 @@
         transition-duration: .4s;
         box-shadow: 1px 1px 20px 8px rgba(255, 149, 2, 0.2);
     }
+}
+
+.extra-link {
+    color: #d9ba91;
+
+    &:hover {
+        color: #ff9054;
+        text-shadow: 4px #7e340d;
+    }
+}
+
+.category {
+    color: #e6d5bf;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-bottom: 4%;
 }
