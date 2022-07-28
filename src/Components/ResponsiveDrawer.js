@@ -25,8 +25,8 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import {BrowserRouter, Link, Routes, Route} from 'react-router-dom'
-
+import {BrowserRouter, Link, Routes, Route} from 'react-router-dom';
+import "../CSS/responsiveDrawer.scss";
 
 const drawerWidth = 240;
 const keyPages = {
@@ -57,12 +57,13 @@ function ResponsiveDrawer(props) {
       <List>
         {Object.keys(keyPages).map((text, index) => (  
           <Accordion>
-          <AccordionSummary
+          <AccordionSummary 
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
+            className="roundedCorner"
           >
-            <ListItem key={text} disablePadding>
+            <ListItem key={text} disablePadding className='roundedCorner'>
                <ListItemIcon>
                  {keyPages[text]}
                </ListItemIcon>
