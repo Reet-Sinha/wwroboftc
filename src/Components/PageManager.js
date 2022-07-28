@@ -14,7 +14,11 @@ const HeaderReplacement = ({children,id},...props) =>{
           const hashid = window.location.hash.replace("#", "");
           if(hashid){
           const element = document.getElementById(hashid);
-          element.scrollIntoView({block:'start',behavior:'smooth'});
+          const yCoordinate = element.getBoundingClientRect().top + window.pageYOffset;
+          const yOffset = -120; 
+          console.log(yCoordinate + yOffset)
+          const y= yCoordinate + yOffset
+          element.scrollIntoView({ top:y, behavior:'smooth'});
           }
         }
       },[])
