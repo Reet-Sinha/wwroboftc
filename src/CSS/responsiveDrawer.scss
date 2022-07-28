@@ -3,6 +3,7 @@
 }
 
 .side-bar-bg {
-    background-color: #B45F06;
+    background: url("./wwroboftc-sidebarbg.png"), #B45F06;
+    background-blend-mode: screen;
     height: 100%;
 }
