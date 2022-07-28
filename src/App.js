@@ -3,6 +3,7 @@ import './App.css';
 import ResponsiveDrawer from './Components/ResponsiveDrawer'
 import PageManager from './Components/PageManager';
 import {BrowserRouter, HashRouter} from 'react-router-dom'
+import * as React from 'react'
 // Import the functions you need from the SDKs you need
 
 // TODO: Add SDKs for Firebase products that you want to use

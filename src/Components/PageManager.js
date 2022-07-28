@@ -3,12 +3,29 @@ import {Route, Routes} from 'react-router-dom'
 import React from 'react'
 import Markdown from 'markdown-to-jsx';
 import '../CSS/PageManager.css'
+import {HashLink} from 'react-router-hash-link'
 
 const drawerWidth = 240;
 
-const header = ({children,id},...props) =>{
-    console.log(id)
-    return(<h1 {...props}>{children}&nbsp;<a href={"#"+id}>#</a></h1>)
+const HeaderReplacement = ({children,id},...props) =>{
+    React.useEffect(()=>{
+        if (window.location.hash) {
+          const hashid = window.location.hash.replace("#", "");
+          if(hashid){
+          const element = document.getElementById(hashid);
+          element.scrollIntoView({block:'start',behavior:'smooth'});
+          }
+        }
+      },[])
+    return(
+        <div>
+            <section id={id}>
+                <h1 {...props}>{children}</h1>
+                <HashLink smooth to={'#'+id}>&nbsp; #</HashLink>
+            </section>
+        </div>
+ 
+    )
 }
 
 export default function PageManager(){
@@ -38,7 +55,7 @@ export default function PageManager(){
                             options={{
                                 overrides:{
                                     h1:{
-                                        component:header,
+                                        component:HeaderReplacement,
                                     }
                                 }
                             }}>
