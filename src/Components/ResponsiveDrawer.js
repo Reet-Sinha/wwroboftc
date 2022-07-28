@@ -27,6 +27,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {BrowserRouter, Link, Routes, Route} from 'react-router-dom';
 import "../CSS/responsiveDrawer.scss";
+import { borderColor } from '@mui/system';
 
 const drawerWidth = 240;
 const keyPages = {
@@ -56,10 +57,13 @@ function ResponsiveDrawer(props) {
       <Divider />
       <List sx={{
         width: { sm: `calc(85%)` },
-        mx: "auto"
+        mx: "auto",
       }}>
         {Object.keys(keyPages).map((text, index) => (  
-          <Accordion>
+          <Accordion sx={{
+            border: 1, 
+            borderColor: "#734a0e"
+          }}>
           <AccordionSummary 
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
