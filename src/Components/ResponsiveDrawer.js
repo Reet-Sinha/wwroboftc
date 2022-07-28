@@ -64,7 +64,10 @@ function ResponsiveDrawer(props) {
           <Accordion sx={{
             border: 1, 
             borderColor: "#734a0e",
-          }}>
+            bgcolor: `rgba(255, 255, 255, 0.2)`,
+            boxShadow: 30
+            
+          }} className="drawer-bg">
           <AccordionSummary 
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"

@@ -3,7 +3,42 @@
 }
 
 .side-bar-bg {
-    background: url("./wwroboftc-sidebarbg.png"), #B45F06;
+    background: url("./wwroboftc-sidebarbg-alternate\ .png"), #b86d0c;
     background-blend-mode: screen;
     height: 100%;
+}
+
+.drawer-bg {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px) !important;
+    overflow: hidden !important;
+    transition-property: box-shadow;
+    transition-duration: .4s;
+
+    &:hover {
+        transition-property: box-shadow;
+        transition-duration: .4s;
+        box-shadow: 1px 1px 25px 10px rgba(255, 149, 2, 0.2);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            120deg,
+            transparent,
+            rgba(255, 149, 2, 0.4)
+            transparent);
+        transition: all 650ms;
+    }
+
+    &:hover::before {
+        left: 100%;
+    }
 }
