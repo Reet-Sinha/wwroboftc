@@ -2,3 +2,8 @@
     text-align: left;
 
 }
+
+.headerDiv{
+    /* display:flex; */
+    flex-direction: row;
+}

@@ -4,6 +4,7 @@ import React from 'react'
 import Markdown from 'markdown-to-jsx';
 import '../CSS/PageManager.css'
 import {HashLink} from 'react-router-hash-link'
+import {Row, Col, Container} from 'react-bootstrap'
 
 const drawerWidth = 240;
 
@@ -18,10 +19,15 @@ const HeaderReplacement = ({children,id},...props) =>{
         }
       },[])
     return(
-        <div>
+        <div key={id}>
             <section id={id}>
-                <h1 {...props}>{children}</h1>
-                <HashLink smooth to={'#'+id}>&nbsp; #</HashLink>
+
+                <h1 >{children} &nbsp; <HashLink smooth to={'#'+id} scroll={el=>{
+                    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+                    const yOffset = -80; 
+                    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+                }}> #</HashLink></h1>
+                
             </section>
         </div>
  
