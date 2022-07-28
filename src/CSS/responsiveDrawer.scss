@@ -20,26 +20,6 @@
     &:hover {
         transition-property: box-shadow;
         transition-duration: .4s;
-        box-shadow: 1px 1px 25px 10px rgba(255, 149, 2, 0.2);
-    }
-
-    &::before {
-        z-index: 0;
-        content: "";
-        position: absolute !important;
-        top: 0 ;
-        left: -100% !important;
-        width: 100% !important;
-        height: 100% !important;
-        background: linear-gradient(
-            120deg,
-            transparent,
-            rgba(255, 149, 2, 0.4)
-            transparent);
-        transition: all 650ms;
-    }
-
-    &:hover::before {
-        left: 100%;
+        box-shadow: 1px 1px 20px 8px rgba(255, 149, 2, 0.2);
     }
 }
