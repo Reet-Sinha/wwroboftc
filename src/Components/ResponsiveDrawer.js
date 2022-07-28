@@ -27,13 +27,15 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {BrowserRouter, Link, Routes, Route} from 'react-router-dom';
 import "../CSS/responsiveDrawer.scss";
+import { borderColor, borderRadius } from '@mui/system';
+import { red } from '@mui/material/colors';
 
 const drawerWidth = 240;
 const keyPages = {
     'Hardware':<SettingsIcon/>, 
     'CAD/Design':<DesignServicesIcon/>, 
     'Software': <CodeIcon/>, 
-    'Marketing/Outreach':<AlternateEmailOutlinedIcon/>
+    'Outreach':<AlternateEmailOutlinedIcon/>
 }
 
 const extraPages = {
@@ -51,19 +53,28 @@ function ResponsiveDrawer(props) {
   };
 
   const drawer = (
-    <div>
-      <Toolbar />
+    <div className='side-bar-bg'>
+      <Toolbar/>
       <Divider />
-      <List>
+      <p className='category'>Learn: </p>
+      <List sx={{
+        width: { sm: `calc(85%)` },
+        mx: "auto",
+      }}>
         {Object.keys(keyPages).map((text, index) => (  
-          <Accordion>
+          <Accordion sx={{
+            border: 1, 
+            borderColor: "#734a0e",
+            bgcolor: `rgba(255, 255, 255, 0.1)`,
+            boxShadow: 30
+            
+          }} className="drawer-bg">
           <AccordionSummary 
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
-            className="roundedCorner"
           >
-            <ListItem key={text} disablePadding className='roundedCorner'>
+            <ListItem key={text} disablePadding>
                <ListItemIcon>
                  {keyPages[text]}
                </ListItemIcon>
@@ -80,10 +91,11 @@ function ResponsiveDrawer(props) {
         </Accordion>  
         ))}
       </List>
-      <Divider />
+      {/* <Divider /> */}
+      <p className='category'>Resources: </p>
       <List>
         {Object.keys(extraPages).map((text, index) => (
-            <Link to ='/about'>    
+            <Link to ='/about' className='extra-link'>    
                 <ListItem key={text} disablePadding>
                     <ListItemButton>
                         <ListItemIcon>
@@ -128,8 +140,9 @@ function ResponsiveDrawer(props) {
       </AppBar>
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, bgcolor: "#B45F06", height: {sm: `calc`} }}
         aria-label="mailbox folders"
+        className='side-bar-bg'
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
