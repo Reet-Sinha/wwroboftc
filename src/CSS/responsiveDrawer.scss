@@ -6,6 +6,7 @@
     background: url("./wwroboftc-sidebarbg-alternate\ .png"), #b86d0c;
     background-blend-mode: screen;
     height: 100%;
+    overflow-y: scroll;
 }
 
 .drawer-bg {
@@ -14,13 +15,16 @@
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px) !important;
     overflow: hidden !important;
-    transition-property: box-shadow;
+    transition-property: box-shadow, background-color;
     transition-duration: .4s;
 
     &:hover {
-        transition-property: box-shadow;
+        transition-property: box-shadow, background-color;
         transition-duration: .4s;
-        box-shadow: 1px 1px 20px 8px rgba(255, 149, 2, 0.2);
+        background: rgba(255, 255, 255, 0.2000001);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px) !important;
+        // box-shadow: 1px 1px 20px 8px rgba(255, 149, 2, 0.2);
     }
 }
 
@@ -38,4 +42,23 @@
     font-weight: bold;
     margin-top: 5%;
     margin-bottom: 4%;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c8995c;
+    border-radius: 3px;
+    transition: 400ms;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d8a058;
+    transition: 400ms;
 }
